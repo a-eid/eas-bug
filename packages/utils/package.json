@@ -1,0 +1,50 @@
+{
+  "version": "0.1.0",
+  "name": "utils",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/utils.esm.js",
+  "react-native": "./dist/utils.esm.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "dev": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": false,
+    "trailingComma": "all"
+  },
+  "size-limit": [
+    {
+      "path": "./dist/utils.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "./dist/utils.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "husky": "^8.0.3",
+    "size-limit": "^8.2.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  }
+}
